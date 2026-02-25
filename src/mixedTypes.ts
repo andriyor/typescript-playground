@@ -46,20 +46,26 @@ for (const mixedType of mixedTypes) {
 }
 
 const ledger1 = mixedTypes.find((txnVertex) => {
-                 return txnVertex.label === 'ledger' && [
-                   "props",
-                 ].includes(txnVertex.properties.refType);
-               });
+  return txnVertex.label === 'ledger' && [
+    "props",
+  ].includes(txnVertex.properties.refType);
+});
 
 // issue
 console.log(ledger1?.properties.refType);
 
 
 const ledger2 = mixedTypes.find((txnVertex): txnVertex is LedgerVertex => {
-                 return txnVertex.label === 'ledger' && [
-                   "props",
-                 ].includes(txnVertex.properties.refType);
-               });
+  return txnVertex.label === 'ledger' && [
+    "props",
+  ].includes(txnVertex.properties.refType);
+});
 
 // correct
 console.log(ledger2?.properties.refType);
+
+mixedTypes.forEach((payoutVertex) => {
+  if (payoutVertex.label !== "ledger" && payoutVertex.id) return;
+  // issue
+  console.log(payoutVertex.properties.refType);
+})
