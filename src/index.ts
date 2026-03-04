@@ -1,3 +1,3 @@
-import { barrelName } from "./withBarrel/helper";
+import { barrelName } from "./withBarrel";
 
 console.log(barrelName);
