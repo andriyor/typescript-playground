@@ -1,0 +1,1 @@
+export { barrelName } from './helper'
