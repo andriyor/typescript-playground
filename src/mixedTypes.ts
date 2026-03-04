@@ -68,4 +68,14 @@ mixedTypes.forEach((payoutVertex) => {
   if (payoutVertex.label !== "ledger" && payoutVertex.id) return;
   // issue
   console.log(payoutVertex.properties.refType);
-})
+});
+
+['dfsdf', ['dsdf']].reduce<string[] | string>((p, c) => {
+      // merge nested arrays
+      return p.concat(Array.isArray(c) ? c : [c]);
+    },);
+
+(['dfsdf', ['dsdf']]).reduce<string[]>(
+  (p, c) => p.concat(Array.isArray(c) ? c : [c]),
+  []
+);
