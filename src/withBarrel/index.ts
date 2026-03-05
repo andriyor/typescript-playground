@@ -1,1 +1,1 @@
-export { barrelName } from './helper'
+export {barrelName } from './helper'
