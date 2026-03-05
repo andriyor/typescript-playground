@@ -39,7 +39,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "paths": {
-      "@withBarrel": ["src/withBarrel/index.ts"],
       "@withBarrel/*": ["src/withBarrel/*"],
     }
   }
