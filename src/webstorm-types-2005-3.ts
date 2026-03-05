@@ -3,9 +3,9 @@ interface GetSkusResponse {
     response: {
         data: {
             skus: {
-                edges: Array<{
+                edges: {
                     cursor: string;
-                }>;
+                }[];
                 pageInfo: {
                     endCursor: string;
                     hasNextPage: boolean;

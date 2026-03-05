@@ -1,18 +1,18 @@
-type Transaction = {
+interface Transaction {
   amount: number;
 }
 
-type Ledger = {
+interface Ledger {
   refType: string
 }
 
-type TransactionVertex = {
+interface TransactionVertex {
   id: string;
   label: "transaction";
   properties: Transaction;
 }
 
-type LedgerVertex = {
+interface LedgerVertex {
   id: string;
   label: "ledger";
   properties: Ledger;
